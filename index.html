@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO-lista</title>
-
-
+    <title>Todo-lista</title>
 </head>
+<script>
+    // Konsolin tulostus ja alert-ikkuna
+    function tulostaMoi() {
+        console.log('Todo-lista avattu')
+        alert("Tervetuloa Todo-listallesi!")
+    }
+    function lueLomake() {
+        // Haetaan viite input-kenttään
+        let kentta = document.querySelector('input');
+        
+        // Haetaan kentän arvo
+        let enimi = kentta.value
+
+        console.log(tehtävä)
+        // Asetetaan kentän arvo
+        let div = document.querySelector('div');
+        div.innerHTML += tehtävä + "<br>"
+    }
+</script>
 
 <body>
-    <h1>TODO-lista</h1>
-    
-</body>
+    <!-- Tässä luodaan H1 elementti ja kiinnitetään siihen kuuntelija -->
+    <!-- h1 onmouseover="tulostaMoi()">Hoi Maailma</h1 -->
+    <h1>Lomake</h1>
+    <input id="tehtävä" onfocus="console.log('Kenttä aktivoitu') " onblur="type=console.log('Poistuit kentästä')"
+        type="text" />
 
-<script src="script.js"></script>
+    <button onclick="lueLomake()">Lisää tehtävä</button>
+
+    <div>
+        <!-- Tulostetaan tänne lomakkeen sisältö -->
+    </div>
+</body>
 
 </html>
