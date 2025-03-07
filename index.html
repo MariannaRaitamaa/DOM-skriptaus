@@ -1,60 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO-lista</title>
+    <script src="script.js" defer></script>
+    <style>
+        .error { border: 2px solid red; }
+        .task-container { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+    </style>
 </head>
 <body>
 
     <h1>TODO-lista</h1>
 
-    <!-- Taulukko, joka on aluksi piilotettu -->
-    <table id="nameTable" border="1" style="display:none;">
-        <thead>
-            <tr>
-                <th>To Do</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
- 
-    <!-- Lomake, josta syötetään nimi -->
+    <!-- Lomake -->
     <label for="name">Tehtävät</label>
-    <input type="text" id="name" placeholder="Lisää tehtävä"><br><br>
+    <input type="text" id="name" placeholder="Lisää tehtävä">
+    <button id="addTaskBtn">Lisää tehtävä</button>
+    <br><br>
 
-    <button onclick="addName()">Lisää tehtävä</button>
-
-    <script>
-        function addName() {
-            // Haetaan taulukko ja taulukon runko (tbody)
-            let table = document.getElementById("nameTable");
-            let tbody = table.getElementsByTagName("tbody")[0];
-            
-            // Haetaan nimi kentästä
-            let name = document.getElementById("name").value;
-
-            // Varmistetaan, että kenttä on täytetty
-            if (name) {
-                // Luodaan uusi rivi
-                let newRow = tbody.insertRow();
-
-                // Luodaan uusi solu ja asetetaan siihen nimi
-                let cell1 = newRow.insertCell(0);
-                cell1.textContent = name;
-
-                // Näytetään taulukko, jos se on piilotettu
-                table.style.display = "table";
-
-                // Tyhjennetään lomake syöttämisen jälkeen
-                document.getElementById("name").value = "";
-            } else {
-                alert("Muista lisätä tehtävä.");
-            }
-        }
-    </script>
+    <!-- Lista tehtävistä -->
+    <div id="taskList"></div>
 
 </body>
 </html>
