@@ -2,13 +2,13 @@ body {
     margin: 20px;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: light beige;
-    color: #1f1d1d;   
+    background-color: #202933;
+    color: whitesmoke;  
     text-align: center;
 }
 
 h1 {
-    color: #1f1d1d;
+    color: whitesmoke;
     font-size: 2em;
     margin-bottom: 20px;
     text-decoration-line: underline;
@@ -17,14 +17,40 @@ h1 {
 
 label {
     display: block;
-    text-align: left;
     font-weight: bold;
+    color: whitesmoke;
+    padding: 10px;
 }
 
 
 div {
-    border: 2px solid #1f1d1d;
+    border: 2px solid #727477;
     padding: 20px;
     text-align: left;
     border-radius: 10px; 
+    color: whitesmoke;
+    width: 55%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
+    margin: 20px auto; /* Keskittää divin sivulle */
+}
+
+.task-container {
+    background-color: #727477;
+    padding: 10px; 
+    border-radius: 5px;
+    width: 50%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
+    margin: 20px auto; /* Keskittää divin sivulle */
+}
+
+.task-container button {
+    background-color: #ff4d4d; /* Punainen tausta */
+    color: white; /* Valkoinen teksti/emoji */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+ 
+.task-container button:hover {
+    background-color: #cc0000; /* Tummempi punainen hover-tilassa */
 }
