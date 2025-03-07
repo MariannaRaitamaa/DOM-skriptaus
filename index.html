@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-lista</title>
+    <title>TODO-lista</title>
 </head>
-<script>
-    // Konsolin tulostus ja alert-ikkuna
-    function tulostaMoi() {
-        console.log('Todo-lista avattu')
-        alert("Tervetuloa Todo-listallesi!")
-    }
-    function lueLomake() {
-        // Haetaan viite input-kenttään
-        let kentta = document.querySelector('input');
-        
-        // Haetaan kentän arvo
-        let enimi = kentta.value
-
-        console.log(tehtävä)
-        // Asetetaan kentän arvo
-        let div = document.querySelector('div');
-        div.innerHTML += tehtävä + "<br>"
-    }
-</script>
-
 <body>
-    <!-- Tässä luodaan H1 elementti ja kiinnitetään siihen kuuntelija -->
-    <!-- h1 onmouseover="tulostaMoi()">Hoi Maailma</h1 -->
-    <h1>Lomake</h1>
-    <input id="tehtävä" onfocus="console.log('Kenttä aktivoitu') " onblur="type=console.log('Poistuit kentästä')"
-        type="text" />
 
-    <button onclick="lueLomake()">Lisää tehtävä</button>
+    <h1>TODO-lista</h1>
 
-    <div>
-        <!-- Tulostetaan tänne lomakkeen sisältö -->
-    </div>
+    <!-- Taulukko, joka on aluksi piilotettu -->
+    <table id="nameTable" border="1" style="display:none;">
+        <thead>
+            <tr>
+                <th>To Do</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+ 
+    <!-- Lomake, josta syötetään nimi -->
+    <label for="name">Tehtävät</label>
+    <input type="text" id="name" placeholder="Lisää tehtävä"><br><br>
+
+    <button onclick="addName()">Lisää tehtävä</button>
+
+    <script>
+        function addName() {
+            // Haetaan taulukko ja taulukon runko (tbody)
+            let table = document.getElementById("nameTable");
+            let tbody = table.getElementsByTagName("tbody")[0];
+            
+            // Haetaan nimi kentästä
+            let name = document.getElementById("name").value;
+
+            // Varmistetaan, että kenttä on täytetty
+            if (name) {
+                // Luodaan uusi rivi
+                let newRow = tbody.insertRow();
+
+                // Luodaan uusi solu ja asetetaan siihen nimi
+                let cell1 = newRow.insertCell(0);
+                cell1.textContent = name;
+
+                // Näytetään taulukko, jos se on piilotettu
+                table.style.display = "table";
+
+                // Tyhjennetään lomake syöttämisen jälkeen
+                document.getElementById("name").value = "";
+            } else {
+                alert("Muista lisätä tehtävä.");
+            }
+        }
+    </script>
+
 </body>
-
 </html>
