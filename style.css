@@ -43,7 +43,7 @@ div {
     background-color: #727477;
     padding: 10px; 
     border-radius: 5px;
-    width: 50%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
+    width: 70%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
     margin: 20px auto; /* Keskittää divin sivulle */
 }
 
