@@ -19,7 +19,9 @@ label {
     display: block;
     font-weight: bold;
     color: whitesmoke;
-    padding: 10px;
+    padding: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 
@@ -31,6 +33,10 @@ div {
     color: whitesmoke;
     width: 55%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
     margin: 20px auto; /* Keskittää divin sivulle */
+}
+
+#addTaskBtn {
+    margin-bottom: 30px; /* Lisää väliä painikkeen ja otsikon väliin */
 }
 
 .task-container {
