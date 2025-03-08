@@ -17,6 +17,7 @@ h1 {
 
 label {
     display: block;
+    font-size: 20px;
     font-weight: bold;
     color: whitesmoke;
     padding: 15px;
@@ -41,7 +42,7 @@ div {
 
 .task-container {
     background-color: #727477;
-    padding: 10px; 
+    padding: 5px; 
     border-radius: 5px;
     width: 70%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
     margin: 20px auto; /* Keskittää divin sivulle */
@@ -51,6 +52,7 @@ div {
     background-color: #ff4d4d; /* Punainen tausta */
     color: white; /* Valkoinen teksti/emoji */
     border: none;
+    display: block;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
