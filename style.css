@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 
-h1 {
+h1 { /* Otsikko */
     color: whitesmoke;
     font-size: 2em;
     margin-bottom: 20px;
@@ -15,7 +15,7 @@ h1 {
     text-align: center;
 }
 
-label {
+label { /*Tehtävät tekstikenttä */
     display: block;
     font-size: 20px;
     font-weight: bold;
@@ -26,31 +26,35 @@ label {
 }
 
 
-div {
+div { /*Tehtävälista */
     border: 2px solid #727477;
     padding: 20px;
     text-align: left;
     border-radius: 10px; 
     color: whitesmoke;
-    width: 55%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
-    margin: 20px auto; /* Keskittää divin sivulle */
+    width: 55%;
+    margin: 20px auto;
 }
 
-#addTaskBtn {
-    margin-bottom: 30px; /* Lisää väliä painikkeen ja otsikon väliin */
+#addTaskBtn { /* Lisää tehtävä -nappi */
+    margin-bottom: 30px;
 }
 
-.task-container {
+.task-container { /* Tehtävälistan tehtävät */
     background-color: #727477;
     padding: 5px; 
     border-radius: 5px;
-    width: 70%; /* Pienennä leveyttä, voit säätää arvoa tarpeen mukaan */
-    margin: 20px auto; /* Keskittää divin sivulle */
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    align-items: center; gap: 10px; 
 }
 
-.task-container button {
-    background-color: #ff4d4d; /* Punainen tausta */
-    color: white; /* Valkoinen teksti/emoji */
+.task-container button { /* Poistonappi */
+    background-color: #ff4d4d;
+    color: white;
     border: none;
     display: block;
     padding: 5px 10px;
@@ -59,6 +63,10 @@ div {
     font-size: 16px;
 }
  
-.task-container button:hover {
-    background-color: #cc0000; /* Tummempi punainen hover-tilassa */
+.task-container button:hover { /* Poistonapin hover */
+    background-color: #cc0000;
+}
+
+.error { /* Syöttökentän virheilmoitus */
+    border: 2px solid red; 
 }

@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO-lista</title>
     <script src="script.js" defer></script>
-    <style>
-        .error { border: 2px solid red; }
-        .task-container { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
-    </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,12 +12,14 @@
     <h1>TODO-lista</h1>
 
     <!-- Lomake -->
-    <input type="text" id="name" placeholder="Lisää tehtävä">
-    <button id="addTaskBtn">Lisää tehtävä</button>
+    <form id="Lomake">
+        <input type="text" id="tehtävä" placeholder="Lisää tehtävä">
+        <button type="submit">Lisää tehtävä</button>
+    </form>
     <label for="name">TEHTÄVÄT</label>
 
     <!-- Lista tehtävistä -->
-    <div id="taskList"></div>
+    <div id="Tehtävälista"></div>
 
 </body>
 </html>
