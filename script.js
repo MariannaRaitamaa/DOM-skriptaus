@@ -38,7 +38,6 @@ function addTask() {
 }
 //Rakentaa tehtävälistan
 function renderTasks() {
-    console.log("Rakennetaan tehtävälista");
     Tehtävälista.innerHTML = "";
 
     // Haetaan tehtävät LocalStoragesta
@@ -46,7 +45,6 @@ function renderTasks() {
     console.log("Tehtäviä löytyi", tasks.length);
 
     tasks.forEach((task, index) => {
-        console.log("Tehtävä näkyville listaan", task);
         const taskContainer = document.createElement("div");
         taskContainer.classList.add("task-container");
 
@@ -54,7 +52,6 @@ function renderTasks() {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
-        console.log("Tehtävä valmis");
         checkbox.addEventListener("change", () => toggleTaskCompletion(index));
 
         // Tehtävän teksti
@@ -83,7 +80,8 @@ function toggleTaskCompletion(index) {
     const tasks = getTasksFromLocalStorage();
     tasks[index].completed = !tasks[index].completed;
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    renderTasks();
+    const taskText = document.querySelectorAll(".task-container span")[index];
+    taskText.style.textDecoration = tasks[index].completed ? "line-through" : "none";
 }
 
 //Poistaa tehtävän
@@ -92,7 +90,7 @@ function removeTask(index) {
     const tasks = getTasksFromLocalStorage();
     tasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    renderTasks();
+    document.querySelectorAll(".task-container")[index].remove();
 }
 
 //Tallennus LocalStorageen
