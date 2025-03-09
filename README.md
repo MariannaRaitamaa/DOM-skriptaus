@@ -17,12 +17,12 @@ Marianna Raitamaa ja Emilia Ahti
 
 ## Sovelluksen esittely
 <p>TODO-lista on yksinkertainen sovellus, johon voit koota oman tehtävälistan, esimerkiksi vaikka kauppalistan.</p>
-<p>Listalle on mahdollisuus lisätä tehtävät/asiat omille riveilleen ja ne on mahdollista merkata tehdyksi tehtävän edessä olevasta laatikosta,</p>
-<p>jolloin laatikko muuttuu siniseksi, siihen ilmestyy väkänen ja tehtävä yliviivataan.</p>
+<p>Listalle on mahdollisuus lisätä tehtävät/asiat omille riveilleen ja ne on mahdollista merkata tehdyksi tehtävän</p>
+<p>edessä olevasta laatikosta, jolloin laatikko muuttuu siniseksi, siihen ilmestyy väkänen ja tehtävä yliviivataan.</p>
 <p>Tehtävä on mahdollista myös poistaa kokonaan tehtävän perässä olevasta roskispainikkeesta.</p>
-<p>Listaan voi lisätä sanoja, joissa on vähintään kolme kirjainta,</p>
-<p>sitä lyhyemmät sanat, tai tyhjä syöte saavat aikaan alert-ponnahdusikkunan maininnalla "sana on liian lyhyt"</p>
-<p>ja syötekentän reunat muuttuvat punaiseksi.</p>
+<p>Listaan voi lisätä sanoja, joissa on vähintään kolme kirjainta, sitä lyhyemmät sanat tai tyhjä syöte</p>
+<p>saavat aikaan alert-ponnahdusikkunan maininnalla "sana on liian lyhyt" ja syötekentän</p>
+<p>reunat muuttuvat punaiseksi.</p>
 
 ## Kuva sovelluksesta
 <img src="kuvat/Todo-sovellus.jpg" alt="Todo-sovellus">
