@@ -90,6 +90,7 @@ function removeTask(index) {
     tasks.splice(index, 1);
     // Tallennetaan uusi lista LocalStorageen
     localStorage.setItem("tasks", JSON.stringify(tasks));
+    document.querySelectorAll(".task-container")[index].remove();
 
     // Päivitetään koko tehtävälista
     renderTasks();
