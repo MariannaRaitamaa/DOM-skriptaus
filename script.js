@@ -13,9 +13,9 @@ Lomake.addEventListener("submit", function(event) {
 
 //Lisää tehtävä
 function addTask() {
-    console.log("Kenttä aktivoitu");
     const taskText = taskInput.value.trim();
-    console.log("Tehtävä syötetty", taskText);
+    console.log("Lisätään tehtävä:", taskText);
+    
 
     //Virheilmoitus liian lyhyestä sanasta
     if (taskText.length < 3) {
@@ -27,7 +27,6 @@ function addTask() {
 
     //Palauttaa syöttökentän normaalitilaan
     taskInput.classList.remove("error");
-    console.log("Tehtävä lisätty", taskText);
 
     //Luodaan tehtävä ja tallennetaan LocalStorageen
     const task = { text: taskText, completed: false };
@@ -42,7 +41,6 @@ function renderTasks() {
 
     // Haetaan tehtävät LocalStoragesta
     const tasks = getTasksFromLocalStorage();
-    console.log("Tehtäviä löytyi", tasks.length);
 
     tasks.forEach((task, index) => {
         const taskContainer = document.createElement("div");
@@ -95,17 +93,15 @@ function removeTask(index) {
 
 //Tallennus LocalStorageen
 function saveTaskToLocalStorage(task) {
-    console.log("Tehtävä tallennettu", task);
     let tasks = getTasksFromLocalStorage();
     tasks.push(task);
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    console.log("Tallennettu Local Storageen:", tasks);
+    console.log(`Tallennetaan tehtävä "${task.text}" LocalStorageen. Yhteensä: ${tasks.length} tehtävää.`);
 }
 
 
 //Hakee tehtävät LocalStoragesta
 function getTasksFromLocalStorage() {
-    console.log("Haetaan tehtävät LocalStoragesta");
     return JSON.parse(localStorage.getItem("tasks")) || [];
 }
 
