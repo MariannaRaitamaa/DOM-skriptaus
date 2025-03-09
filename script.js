@@ -86,9 +86,13 @@ function toggleTaskCompletion(index) {
 function removeTask(index) {
     console.log("Tehtävä poistettu");
     const tasks = getTasksFromLocalStorage();
+    // Poistetaan tehtävälistasta
     tasks.splice(index, 1);
+    // Tallennetaan uusi lista LocalStorageen
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    document.querySelectorAll(".task-container")[index].remove();
+
+    // Päivitetään koko tehtävälista
+    renderTasks();
 }
 
 //Tallennus LocalStorageen
