@@ -25,7 +25,7 @@ Marianna Raitamaa ja Emilia Ahti
 <p>ja syötekentän reunat muuttuvat punaiseksi.</p>
 
 ## Kuva sovelluksesta
-
+<img src="kuvat/Todo-sovellus.jpg" alt="Todo-sovellus">
 
 ## Käytetyt teknologiat
 <p>Projektin toteutuksessa on käytetty html, css ja javascriptiä.</p>
