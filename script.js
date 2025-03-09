@@ -75,12 +75,12 @@ function renderTasks() {
 //Muokkaa tehtävän tilaa
 function toggleTaskCompletion(index) {
     console.log("Tehtävän tila muutettu");
-    const tasks = getTasksFromLocalStorage();
+    let tasks = getTasksFromLocalStorage();
     tasks[index].completed = !tasks[index].completed;
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    const taskText = document.querySelectorAll(".task-container span")[index];
-    taskText.style.textDecoration = tasks[index].completed ? "line-through" : "none";
+    renderTasks(); // Päivitetään koko lista oikein
 }
+
 
 //Poistaa tehtävän
 function removeTask(index) {
