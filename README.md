@@ -2,7 +2,7 @@
 Marianna Raitamaa ja Emilia Ahti
 
 ## Demo linkki:
-<p>Access my site at [google.com](https://google.com)</p>
+<p>https://mariannaraitamaa.github.io/DOM-skriptaus/</p>
 
 ## Miten työ on toteutettu
 <p>Projekti on toteutettu yhteistyöllä sovittuina tapaamisaikoina teamsin välityksellä.</p>
