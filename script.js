@@ -50,6 +50,8 @@ function renderTasks() {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
+        checkbox.id = `task-${index}`;
+        checkbox.name = "taskCheckbox";
         checkbox.addEventListener("change", () => toggleTaskCompletion(index));
 
         // Tehtävän teksti
