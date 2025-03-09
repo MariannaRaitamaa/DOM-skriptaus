@@ -50,12 +50,6 @@ function renderTasks() {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.checked = task.completed;
-        checkbox.id = `task-${index}`;
-
-        const label = document.createElement("label");
-        label.htmlFor = `task-${index}`;
-        label.textContent = "Merkitse valmiiksi";
-
         checkbox.addEventListener("change", () => toggleTaskCompletion(index));
 
         // Tehtävän teksti
@@ -71,7 +65,6 @@ function renderTasks() {
         deleteBtn.addEventListener("click", () => removeTask(index));
 
         taskContainer.appendChild(checkbox);
-        taskContainer.appendChild(label);
         taskContainer.appendChild(taskText);
         taskContainer.appendChild(deleteBtn);
 
