@@ -30,9 +30,9 @@ Marianna Raitamaa ja Emilia Ahti
 ## Käytetyt teknologiat
 <p>Projektin toteutuksessa on käytetty html, css ja javascriptiä.</p>
 <li>
-<ul>HTML on käytetty sovelluksen rakenteen määrittelyyn,</ul>
-<ul>CSS on käytetty sovelluksen ulkoasun ja asettelun määrittelyyn ja</ul>
-<ul>Javascriptiä on käytetty sovelluksen interaktiivisuuden luomiseen.</ul>
+  <ul>HTML on käytetty sovelluksen rakenteen määrittelyyn,</ul>
+  <ul>CSS on käytetty sovelluksen ulkoasun ja asettelun määrittelyyn ja</ul>
+  <ul>Javascriptiä on käytetty sovelluksen interaktiivisuuden luomiseen.</ul>
 </li>
 <p>Tehtävälistan tiedot tallennetaan localstorageen.</p>
 
