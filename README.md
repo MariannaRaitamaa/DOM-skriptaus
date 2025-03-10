@@ -3,6 +3,7 @@ Marianna Raitamaa ja Emilia Ahti
 
 ## Demo linkki:
 <p>https://mariannaraitamaa.github.io/DOM-skriptaus/</p>
+<p>https://dom-skriptaus.netlify.app/</p>
 
 ## Miten työ on toteutettu
 <p>Projekti on toteutettu yhteistyöllä sovittuina tapaamisaikoina teamsin välityksellä.</p>
